@@ -1,0 +1,85 @@
+.advantages {
+  background: radial-gradient(100% 586.65% at 0% 100%, #504740 0%, #5C4359 16.36%, #382B3F 42.19%, #171717 100%);
+  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+  padding: 60px 20px 60px 20px;
+  border-radius: 20px;
+
+  @include onTablet {
+    padding: 80px 77px 80px 40px;
+    border-radius: 32px;
+  }
+
+  @include onDesktop {
+    padding: 80px 104px;
+    border-radius: 32px;
+  }
+
+  &__grid{
+    @include onDesktop {
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    margin-bottom: 40px;
+  }
+
+  &__container {
+    @include onDesktop {
+      width: 397px;
+      margin-left: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__p {
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 16px;
+
+    @include onTablet {
+      margin-bottom: 40px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &-svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &-second {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      position: relative;
+      padding-left: 64px;
+      margin-bottom: 20px;
+
+      @include onTablet {
+        max-width: 396px;
+        font-size: 14px;
+        box-sizing: border-box;
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    @include onTablet {
+      max-width: 396px;
+    }
+  }
+}

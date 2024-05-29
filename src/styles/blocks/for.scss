@@ -1,0 +1,90 @@
+.for {
+  &__grid {
+    gap: 44px;
+  }
+
+  &__content {
+    @include onTablet {
+      margin-right: 46px;
+    }
+  }
+
+  &__subtitle {
+    @include onTablet {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &__article {
+    margin-bottom: 40px;
+    font-weight: 300;
+
+    @include onTablet {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 44px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: calc((100vw - 40px) * 1.147);
+
+    @include onTablet {
+      height: calc((100vw - 164px) * 1.147);
+    }
+
+    @include onDesktop {
+      height: auto;
+      order: -1;
+    }
+
+    &-1 {
+      width: 71%;
+      height: 71%;
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+      background: $gradient;
+
+      @include onTablet {
+        width: 75%;
+        height: 75%;
+      }
+    }
+
+    &-2 {
+      width: 25%;
+      height: 34%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../images/for2.png");
+      background-size: cover;
+      border-radius: 10px;
+
+      @include onTablet {
+        width: 18.5%;
+        height: 25%;
+      }
+    }
+
+    &-3 {
+      width: 71%;
+      height: 71%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-image: url("../images/for1.png");
+      background-size: cover;
+      border-radius: 20px;
+
+      @include onTablet {
+        width: 75%;
+        height: 74%;
+      }
+    }
+  }
+}

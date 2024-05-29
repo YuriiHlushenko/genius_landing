@@ -1,0 +1,222 @@
+.main {
+  position: relative;
+  overflow-x: hidden;
+
+  &__container {
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 24px;
+
+    @include onTablet {
+      justify-content: flex-start;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 4px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 30px;
+
+      &:last-child {
+        display: none;
+
+        @include onTablet {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__ai {
+    &::first-line {
+      color: $accent;
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 120.48px;
+      text-align: left;
+    }
+
+    position: relative;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 55.22px;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+
+    &-text {
+      text-transform: none;
+      position: absolute;
+      width: 198px;
+      height: 54px;
+      left: 118px;
+      top: 26px;
+
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 17.57px;
+      text-align: left;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    width: 264px;
+    margin-bottom: 40px;
+
+    @include onTablet {
+      width: inherit;
+    }
+
+    &-img {
+      width: 112px;
+      height: 24px;
+      flex-shrink: 0;
+      background-image: url("../images/rating.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &-text {
+      @include onTablet {
+        font-size: 18px;
+        line-height: 22.59px;
+        text-align: left;
+      }
+    }
+  }
+
+  &__text {
+    width: 267px;
+    margin: 0 0 40px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.08px;
+    text-align: left;
+
+    @include onTablet {
+      width: 532px;
+      font-size: 26px;
+      line-height: 32.63px;
+      text-align: left;
+    }
+  }
+
+  &__sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 42px;
+
+    @include onTablet {
+      align-items: flex-start;
+    }
+  }
+
+  &__button {
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+  &__subtext {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.08px;
+    text-align: left;
+  }
+
+  &__pictures {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+    height: calc((100vw - 40px) * 1.082);
+
+    background-image: url("../images/img.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    @include onTablet {
+      height: calc((100vw - 164px) * 1.082);
+    }
+
+    @include onDesktop {
+      height: auto;
+    }
+  }
+
+  &__speakers {
+    display: flex;
+    font-size: 14px;
+    line-height: 17.57px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 32px 20px;
+    gap: 28px;
+    border-radius: 20px;
+    background-color: $accent;
+    font-weight: 600;
+
+    width: 27%;
+    height: 62%;
+
+    @include onTablet {
+      padding: 60px 32px;
+      font-size: 24px;
+      line-height: 30.12px;
+    }
+
+    @include onDesktop {
+      width: 165px;
+      height: 360px;
+    }
+
+    &-photos {
+      width: 100%;
+      height: 62%;
+      position: relative;
+
+      @include onTablet {
+        width: 73%;
+      }
+    }
+
+    &-photos>img {
+      width: 100%;
+      left: 0;
+      position: absolute;
+    }
+
+    &-photos>img:nth-child(2) {
+      bottom: 20%;
+
+      @include onTablet {
+        bottom: 30%;
+      }
+    }
+
+    &-photos>img:last-child {
+      bottom: 0;
+    }
+  }
+}

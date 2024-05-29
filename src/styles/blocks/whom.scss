@@ -1,0 +1,90 @@
+.whom {
+  position: relative;
+  border-radius: 32px;
+  background: linear-gradient(4.87deg, rgba(18, 18, 18, 0) 4%, rgba(32, 32, 32, 0.931223) 70.19%, #212121 109.57%, #212121 155.84%, #212121 190.88%);
+
+  padding: 60px 18px;
+
+
+  &:after {
+    position: absolute;
+    border-radius: 32px;
+    right: 0;
+    bottom: 0;
+    top: 40%;
+    left: 0;
+    content: '';
+    background-image: url("../images/whom.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    z-index: -2;
+
+    @include onTablet {
+      background-image: url("../images/whom2.png");
+    }
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 35%;
+    top: 35%;
+    left: 0;
+    content: '';
+    background: linear-gradient(4.87deg, rgba(18, 18, 18, 0) 4%, rgba(32, 32, 32, 0.931223) 70.19%, #212121 109.57%, #212121 155.84%, #212121 190.88%);
+    z-index: -1;
+  }
+
+
+  &__title {
+    text-align: center;
+
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+
+    @include onTablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    background: rgba(24, 23, 29, 0.7);
+    width: 284px;
+    height: 274px;
+    padding: 40px 20px 0px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    @include onTablet {
+      width: 240px;
+    }
+
+    &-subtitle {
+      margin: 0;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    &-p {
+      text-align: center;
+    }
+  }
+
+  &__case {
+    z-index: 3;
+  }
+}
