@@ -1,13 +1,15 @@
-# Museum landing page
+# Genius landing page
 
 - The design 1440px
 - Desktop 1280px
 - Tablet 640px
 - Mobile (> 320px)
 
-In this project I used HTML, SCSS, JavaScript, BEM.
+The task is partially completed!
 
-[DEMO LINK](https://yuriihlushenko.github.io/museum-landing/)
+In this project I used HTML, SASS/SCSS, BEM.
 
-Landing page implemented according to [Figma design](https://www.figma.com/file/cRBCqE06cDrY3s4jX7h3iY/%D0%9D%D0%90%D0%9C%D0%A3-(Edit)?node-id=0%3A1)
+[DEMO LINK](https://yuriihlushenko.github.io/genius_landing/)
+
+Landing page implemented according to [Figma design](https://www.figma.com/design/DlSXvq3pEtDRnFpTpw6b4Y/%D0%9B%D0%B5%D0%BD%D0%B4%D1%96%D0%BD%D0%B3---%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF?node-id=2-6&t=Y3kIjzhPCXqmScBI-0)
 
